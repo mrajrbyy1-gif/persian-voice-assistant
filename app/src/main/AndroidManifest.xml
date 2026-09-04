@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Microphone برای تشخیص گفتار - در زمان نیاز درخواست می‌شود -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- اینترنت برای LLM -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- اختیاری - زمانی که واقعا نیاز شود درخواست می‌شود -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.CALL_PHONE"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.SEND_SMS"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.READ_CALENDAR"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.SET_ALARM"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:node="merge" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:node="merge" />
+
+    <!-- Foreground Service برای Background Assistant -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+
+    <queries>
+        <!-- برای باز کردن سایر اپلیکیشن‌ها -->
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="smsto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".PersianVoiceAssistantApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PersianVoiceAssistant"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale|layoutDirection"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Voice Service -->
+        <service
+            android:name=".core.voice.VoiceService"
+            android:foregroundServiceType="microphone"
+            android:exported="false" />
+    </application>
+</manifest>

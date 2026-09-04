@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- نام اپلیکیشن -->
+    <string name="app_name">دستیار فارسی</string>
+    <string name="app_name_short">PVA</string>
+
+    <!-- صفحه اصلی -->
+    <string name="home_title">دستیار فارسی</string>
+    <string name="home_greeting">سلام، آماده‌ام کمکت کنم 👋</string>
+    <string name="home_last_conversation">آخرین مکالمه</string>
+    <string name="home_no_conversation">هنوز مکالمه‌ای نداشتیم</string>
+    <string name="home_mic_button_desc">دکمه صحبت کردن</string>
+
+    <!-- وضعیت‌های Assistant -->
+    <string name="state_idle">سلام، چه کمکی از دستم برمیاد؟</string>
+    <string name="state_listening">دارم گوش می‌کنم...</string>
+    <string name="state_processing">دارم بررسی می‌کنم...</string>
+    <string name="state_executing_tool">در حال انجام کار...</string>
+    <string name="state_speaking">در حال پاسخ...</string>
+    <string name="state_error">خطایی رخ داد</string>
+
+    <!-- Permission -->
+    <string name="permission_microphone_title">اجازه استفاده از میکروفون</string>
+    <string name="permission_microphone_message">برای شنیدن صدای شما، به میکروفون نیاز دارم.</string>
+    <string name="permission_grant">اجازه می‌دهم</string>
+    <string name="permission_deny">الان نه</string>
+
+    <!-- Settings -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="settings_ai_provider">ارائه‌دهنده هوش مصنوعی</string>
+    <string name="settings_api_key">کلید API</string>
+    <string name="settings_model">مدل</string>
+    <string name="settings_voice_language">زبان صدا</string>
+    <string name="settings_speech_speed">سرعت گفتار</string>
+    <string name="settings_speech_pitch">زیر و بمی صدا</string>
+    <string name="settings_auto_speak">پاسخ خودکار صوتی</string>
+    <string name="settings_wake_word">کلمه بیدارباش</string>
+    <string name="settings_dark_mode">حالت تاریک</string>
+    <string name="settings_memory">حافظه</string>
+    <string name="settings_privacy">حریم خصوصی</string>
+    <string name="settings_permissions">مجوزها</string>
+    <string name="settings_about">درباره</string>
+
+    <!-- Privacy -->
+    <string name="privacy_where_stored">مکالمات شما در دستگاه خودتان رمزگذاری‌شده ذخیره می‌شود.</string>
+    <string name="privacy_when_sent">فقط زمانی که از دستیار سؤال می‌پرسید، پیام به ارائه‌دهنده AI ارسال می‌شود.</string>
+    <string name="privacy_clear_conversations">پاک کردن تمام مکالمات</string>
+    <string name="privacy_clear_memory">پاک کردن حافظه</string>
+    <string name="privacy_clear_api_key">پاک کردن کلید API</string>
+
+    <!-- Errors -->
+    <string name="error_network">اتصال به اینترنت برقرار نیست.</string>
+    <string name="error_ai_provider">اتصال به سرویس هوش مصنوعی برقرار نشد.\nاتصال اینترنت یا تنظیمات Provider را بررسی کنید.</string>
+    <string name="error_permission_denied">برای این کار به مجوز نیاز دارم.</string>
+    <string name="error_unknown">خطای ناشناخته‌ای رخ داد.</string>
+
+    <!-- Generic -->
+    <string name="cancel">لغو</string>
+    <string name="confirm">تأیید</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="ok">باشه</string>
+    <string name="retry">تلاش مجدد</string>
+    <string name="back">بازگشت</string>
+    <string name="next">بعدی</string>
+</resources>

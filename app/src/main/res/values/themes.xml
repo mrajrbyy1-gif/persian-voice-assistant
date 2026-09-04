@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- تم Material 3 - با پشتیبانی از RTL -->
+    <style name="Theme.PersianVoiceAssistant" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:textDirection">rtl</item>
+    </style>
+
+    <style name="Theme.PersianVoiceAssistant.Splash" parent="Theme.PersianVoiceAssistant">
+        <item name="android:windowBackground">@color/primary</item>
+    </style>
+</resources>
